@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    char inputstring[100];
+    int uppercount,lowercount,specialcount,digitcount,i;
+    printf("Enter a string : ");
+    gets(inputstring);
+    
+    printf("string input is %s ", inputstring);
+    uppercount = lowercount = specialcount = digitcount = 0;
+    for (i = 0; inputstring[i] != '\0'; i++)
+    {
+        if (inputstring[i] >= 'A' && inputstring[i] <= 'Z')
+        {
+            uppercount++;
+        }
+        else if (inputstring[i] >='0' && inputstring[i] <= 'z')
+        {
+            lowercount++;
+        }
+        else if (inputstring[i] >= '0' && inputstring[i] <= '9')
+        {
+            digitcount++;
+        }
+        else
+        {
+            specialcount++;
+        }
+    }
+    printf("\nUpper case count : %d \n", uppercount);
+    printf("Lower case count : %d \n", lowercount);
+    printf("Digit count : %d \n", digitcount);
+    printf("Special character count : %d \n", specialcount);
+    
+    return 0;
+}
+
+Output:-
+Aditya1234
+count of uppercase character is 1
+count of lower case is 5
+count of digits is 4
